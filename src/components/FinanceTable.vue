@@ -43,6 +43,8 @@ export default {
       return str.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
     },
     openGraphicForRow(incomingData) {
+      if (incomingData.type === 'graphic') return;
+
       this.financeStore.changeGraphicPosition(incomingData.id);
       this.setGraphicForData(incomingData);
       this.financeStore.showGraphic();

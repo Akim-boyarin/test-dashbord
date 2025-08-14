@@ -106,6 +106,7 @@ export const useFinanceStore = defineStore('finance', {
                     return {
                         id,
                         isOpened,
+                        type,
                     };
                 }
 
